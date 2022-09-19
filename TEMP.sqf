@@ -12,9 +12,9 @@ BIS_WL_initModule setVariable ["BIS_WL_fogOfWar", 1];
 BIS_WL_initModule setVariable ["BIS_WL_playersAlpha", 50];
 BIS_WL_initModule setVariable ["BIS_WL_markersAlpha", 50];
 BIS_WL_initModule setVariable ["BIS_WL_requisitionPreset", "['A3ReduxAll']"];
-BIS_WL_initModule setVariable ["BIS_WL_scanCost", 750];
+BIS_WL_initModule setVariable ["BIS_WL_scanCost", 1000];
 BIS_WL_initModule setVariable ["BIS_WL_fastTravelCostOwned", 0];
-BIS_WL_initModule setVariable ["BIS_WL_fastTravelCostContested", 150]; //Cost of fast travel to contested sector
+BIS_WL_initModule setVariable ["BIS_WL_fastTravelCostContested", 350]; //Cost of fast travel to contested sector
 BIS_WL_initModule setVariable ["BIS_WL_fundsTransferCost", 2000];  //default 1000; Increased to 2000 to limits a CP exploit on official servers
 BIS_WL_initModule setVariable ["BIS_WL_targetResetCost", 500]; //default value 2000; lowered to 500 for official servers
 BIS_WL_initModule setVariable ["BIS_WL_scanEnabled", TRUE];
@@ -23,7 +23,7 @@ BIS_WL_initModule setVariable ["BIS_WL_maxCP", 50000];
 BIS_WL_initModule setVariable ["BIS_WL_dropCost", 0];
 BIS_WL_initModule setVariable ["BIS_WL_dropCost_far", 3000]; //Cost to drop crates/infantry anywhere near your position
 BIS_WL_initModule setVariable ["BIS_WL_autonomous_limit", 2];
-BIS_WL_initModule setVariable ["BIS_WL_arsenalEnabled", TRUE];
+BIS_WL_initModule setVariable ["BIS_WL_arsenalEnabled", FALSE];
 BIS_WL_initModule setVariable ["BIS_WL_arsenalCost", 1000];
 BIS_WL_initModule setVariable ["BIS_WL_maxSubordinates", 1]; //default value 8
 BIS_WL_initModule setVariable ["BIS_WL_assetLimit", 10];
