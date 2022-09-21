@@ -17,13 +17,13 @@ class EditorData
 	class Camera
 	{
 		pos[]={2955.5027,237.24536,14230.838};
-		dir[]={-0.58575732,-0.35557979,0.72832102};
-		up[]={-0.22284746,0.93464589,0.27708489};
-		aside[]={0.779248,-1.4901161e-008,0.62671578};
+		dir[]={-0.58575732,-0.35557976,0.72832102};
+		up[]={-0.22284742,0.93464589,0.2770848};
+		aside[]={0.779248,1.4901161e-008,0.62671572};
 	};
 };
 binarizationWanted=0;
-sourceName="warlordsreduxWW2";
+sourceName="ww2wwwwwwww";
 addons[]=
 {
 	"A3_Modules_F",
@@ -555,12 +555,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={13306.188,34.50457,7380.6309};
-				angles[]={6.2612395,0,6.2814593};
+				position[]={13306.188,34.504566,7380.6309};
+				angles[]={6.2612467,0,6.2814574};
 			};
+			init="this setVariable [""BIS_WL_services"", [""A""]]; this setVariable [""BIS_WL_canBeBase"", FALSE]";
 			id=38;
 			type="Logic";
-			atlOffset=3.8146973e-006;
 		};
 		class Item38
 		{
@@ -1261,7 +1261,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={9742.3779,56.425781,11879.209};
-			angle=1.9347813;
+			angle=1.9347811;
 			class Attributes
 			{
 				sizeA=220.84525;
