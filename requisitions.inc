@@ -61,9 +61,8 @@ class CfgWLRequisitionPresets
 			class Gear
 			{
 				class LIB_BasicAmmunitionBox_GER				{cost = 50;		requirements[]={};	};	// "Basic Ammo [NATO]"
-				class LIB_BasicWeaponsBox_GER						{cost = 100;	requirements[]={};	};	// "Basic Weapons [NATO]"
 				class LIB_Mine_Ammo_Box_Ger					{cost = 300;	requirements[]={};	};	// "Explosives [NATO]"
-				class LIB_WeaponsBox_Big_GER					{cost = 600;	requirements[]={};	};	// "Special Weapons [NATO]"
+				class LIB_WeaponsBox_Big_GER					{cost = 200;	requirements[]={};	};	// "Special Weapons [NATO]"
 				class Box_NATO_AmmoVeh_F					{cost = 800;	requirements[]={};	};	// "Vehicle Ammo [NATO]"
 			};
 			class Defences
@@ -117,8 +116,8 @@ class CfgWLRequisitionPresets
 			};
 			class Aircraft
 			{
-				class LIB_Pe2_w		                        {cost = 8000;	requirements[]={"A"};	};	// "To-199 Neophron (CAS)"
-				class LIB_P39_w					            {cost = 18000;	requirements[]={"A"};	};	// "To-201 Shikra"
+				class LIB_Pe2_w		                        {cost = 7000;	requirements[]={"A"};	};	// "To-199 Neophron (CAS)"
+				class LIB_P39_w					            {cost = 16500;	requirements[]={"A"};	};	// "To-201 Shikra"
 				//class O_Plane_Fighter_02_Stealth_F		{cost = 42000;	requirements[]={"A"};	};	// "To-201 Shikra Stealth"
 				
 			};
@@ -131,10 +130,8 @@ class CfgWLRequisitionPresets
 			class Gear
 			{
 				class LIB_BasicAmmunitionBox_SU		    	{cost = 50;		requirements[]={};	};	// "Basic Ammo [CSAT]"
-				class LIB_BasicWeaponsBox_SU				{cost = 100;	requirements[]={};	};	// "Basic Weapons [CSAT]"
 				class LIB_Mine_Ammo_Box_Su					{cost = 300;	requirements[]={};	};	// "Explosives [CSAT]"
-				class LIB_WeaponsBox_Big_SU					{cost = 600;	requirements[]={};	};	// "Special Weapons [CSAT]"
-				class LIB_Lone_Big_Box				     	{cost = 600;	requirements[]={};	};	// "Special Weapons [CSAT]"
+				class LIB_WeaponsBox_Big_SU					{cost = 200;	requirements[]={};	};	// "Special Weapons [CSAT]"
 				class Box_East_AmmoVeh_F					{cost = 800;	requirements[]={};	};	// "Vehicle Ammo [CSAT]"
 			};
 			class Defences

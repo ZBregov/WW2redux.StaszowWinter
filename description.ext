@@ -3,9 +3,9 @@
 #include "scripts\taw_vd\GUI.h"
 
 
-onLoadName = "Warlords Redux 2.4"; 
-dev = "Jezuro + WSV";
-author = "Jezuro + WSV";
+onLoadName = "Warlords Redux 2.4 WW2"; 
+dev = "Jezuro + WSV+Tin";
+author = "Jezuro + WSV+Tin";
 
 respawn = 3;
 respawnDelay = 30;

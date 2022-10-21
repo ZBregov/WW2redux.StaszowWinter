@@ -10,27 +10,31 @@ private _connectedToBase = count (WL_BASES arrayIntersect (_sector getVariable "
 if (_side == BIS_WL_localSide) then {
 	if (count (_sector getVariable "BIS_WL_vehiclesToSpawn") == 0 && !_connectedToBase) then {
 		private _roads = ((_sector nearRoads 400) select {count roadsConnectedTo _x > 0}) inAreaArray (_sector getVariable "objectAreaComplete");
-		if (count _roads > 0) then {
-			private _road = selectRandom _roads;
-			_vehicleArray = [position _road, _road getDir selectRandom (roadsConnectedTo _road), selectRandomWeighted (BIS_WL_factionVehicleClasses # (BIS_WL_sidesArray find _side)), _side] call BIS_fnc_spawnVehicle;
-			_vehicleArray params ["_vehicle", "_crew", "_group"];
-			
-			_vehicle setVariable ["BIS_WL_parentSector", _sector];
-			[objNull, _vehicle] call BIS_fnc_WL2_newAssetHandle;
-			
+		private _spawns = allSimpleObjects ["WW2_JNS_C_GrassCrookedGreen"] inAreaArray (_sector getVariable "objectAreaComplete");
+		if (count _spawns > 0) then {
 			{
-				_x setVariable ["BIS_WL_parentSector", _sector];
-				[objNull, _x] call BIS_fnc_WL2_newAssetHandle;
-			} forEach _crew;
-			
-			[_group, 0] setWaypointPosition [position _vehicle, 0];
-			_group deleteGroupWhenEmpty TRUE;
-			
-			_wp = _group addWaypoint [position _road, 200];
-			_wp setWaypointType "SAD";
-			
-			_wp = _group addWaypoint [position _road, 0];
-			_wp setWaypointType "CYCLE";
+				private _spawn = _x;
+				_vehicleArray = [position _spawn, getDir _spawn, selectRandomWeighted (BIS_WL_factionVehicleClasses # (BIS_WL_sidesArray find _side) ), _side] call BIS_fnc_spawnVehicle; // 
+				_vehicleArray params ["_vehicle", "_crew", "_group"];
+				
+				_vehicle setVariable ["BIS_WL_parentSector", _sector];
+				[objNull, _vehicle] call BIS_fnc_WL2_newAssetHandle;
+				
+				//_crew joinSilent createGroup _side;
+				{
+					_x setVariable ["BIS_WL_parentSector", _sector];
+					[objNull, _x] call BIS_fnc_WL2_newAssetHandle;
+				} forEach _crew;
+				
+				[_group, 0] setWaypointPosition [position _vehicle, 0];
+				_group deleteGroupWhenEmpty TRUE;
+				
+				_wp = _group addWaypoint [position _spawn, 200];
+				_wp setWaypointType "SAD";
+				
+				_wp = _group addWaypoint [position _spawn, 0];
+				_wp setWaypointType "CYCLE";
+			} forEach _spawns;
 		};
 	} else {
 		{
@@ -41,8 +45,10 @@ if (_side == BIS_WL_localSide) then {
 			
 			_vehicle setVariable ["BIS_WL_parentSector", _sector];
 			[objNull, _vehicle] call BIS_fnc_WL2_newAssetHandle;
-			
+
+			_crew joinSilent createGroup _side;
 			{
+
 				_x setVariable ["BIS_WL_parentSector", _sector];
 				[objNull, _x] call BIS_fnc_WL2_newAssetHandle;
 			} forEach _crew;
@@ -66,7 +72,7 @@ if (_side == BIS_WL_localSide) then {
 		private _neighbors = (_sector getVariable "BIS_WL_connectedSectors") select {(_x getVariable "BIS_WL_owner") == _side};
 		
 		if (count _neighbors > 0) then {
-			_vehicleArray = [position selectRandom _neighbors, 0, selectRandomWeighted (BIS_WL_factionAircraftClasses # (BIS_WL_sidesArray find _side)), _side] call BIS_fnc_spawnVehicle;
+			_vehicleArray = [position selectRandom _neighbors, 0, selectRandomWeighted (BIS_WL_factionAircraftClasses # (BIS_WL_sidesArray find _side)), "EAST"] call BIS_fnc_spawnVehicle;
 			_vehicleArray params ["_vehicle", "_crew", "_group"];
 			
 			_vehicle setVariable ["BIS_WL_parentSector", _sector];

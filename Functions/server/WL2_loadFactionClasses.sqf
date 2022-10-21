@@ -58,10 +58,10 @@ BIS_WL_factionUnitClasses = [
 		"LIB_SOV_Scout_sniper_w",			5 //sniper, default 10
 	],
 	[
-		"LIB_US_Corporal_w",			15, //rifleman, default 100
-		"LIB_UK_Rifleman_w",			15, //rifleman, default 100
-		"LIB_US_Grenadier_w",		40, //Grenadir, default 80
-		"LIB_UK_Grenadier_w",		40, //Grenadir, default 80
+		"LIB_US_Corporal_w",			30, //rifleman, default 100
+		"LIB_UK_Rifleman_w",			30, //rifleman, default 100
+		"LIB_US_Grenadier_w",		15, //Grenadir, default 80
+		"LIB_UK_Grenadier_w",		15, //Grenadir, default 80
 		"LIB_US_Smgunner_w",		30, //Autorifleman, default 70
 		"LIB_US_Captain_w",		5, //Team leader. default 30
 		"LIB_UK_Officer_w",		5, //Team leader. default 30
@@ -114,7 +114,7 @@ BIS_WL_factionVehicleClasses = [
 		"LIB_Churchill_Mk7_Crocodile_w",					40, //Nyx 20mm, default 50
 		"LIB_US_M3_Halftrack_w",					40, //strider GMG, default 100
 		"LIB_UK_Willys_MB_M1919_w",					40, //strider HMG, default 100
-		"LIB_Churchill_Mk7_Howitzer_w",				60 //Kuma, default 25
+		"LIB_Churchill_Mk7_Howitzer_w",				50 //Kuma, default 25
 	]
 ];
 
