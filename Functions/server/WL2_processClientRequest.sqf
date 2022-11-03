@@ -216,6 +216,7 @@ if !(isNull _sender) then {
 					};
 				};
 				
+				/*
 				private _asset = objNull;
 				_parachute = createVehicle [if (_isMan) then {"Steerable_Parachute_F"} else {"B_Parachute_02_F"}, _targetPosFinal, [], 0, "NONE"];
 				//called in Inf and Vehicle spawning code. Inf = _isMan, Vic = Else 
@@ -230,6 +231,18 @@ if !(isNull _sender) then {
 							deleteVehicle _parachute;
 						};
 					}; 
+				} else {
+					private _playerPos = getPosATL _sender;
+					_asset = createVehicle [_className, _playerPos, [], 0, "NONE"];
+				};
+				*/
+
+				private _asset = objNull;
+				//_parachute = createVehicle [if (_isMan) then {"Steerable_Parachute_F"} else {"B_Parachute_02_F"}, _targetPosFinal, [], 0, "NONE"];
+				//called in Inf and Vehicle spawning code. Inf = _isMan, Vic = Else 
+				if (_isMan) then {
+					_asset = (group _sender) createUnit [_className, _targetPosFinal, [], 0, "NONE"];
+				
 				} else {
 					private _playerPos = getPosATL _sender;
 					_asset = createVehicle [_className, _playerPos, [], 0, "NONE"];
